@@ -14,7 +14,6 @@ public class DemoMiddleApplication {
 	      return "APP Engine deployment success v3";
 	   }
 	 
-
 	public static void main(String[] args) {
 		SpringApplication.run(DemoMiddleApplication.class, args);
 	}
