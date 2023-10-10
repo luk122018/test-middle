@@ -2,22 +2,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app.kubernetes.io/instance: guestbook
-  name: guestbook-ui
+    app.kubernetes.io/instance: test-app
+  name: test-app
   namespace: default
 spec:
   replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: guestbook-ui
+      app: test-app
   template:
     metadata:
       labels:
-        app: guestbook-ui
+        app: test-app
     spec:
       containers:
-        - image: 'gcr.io/heptio-images/ks-guestbook-demo:0.2'
-          name: guestbook-ui
+        - image: 'gcr.io/heptio-images/ks-guestbook-demo:0.1'
+          name: test-app
           ports:
             - containerPort: 80
